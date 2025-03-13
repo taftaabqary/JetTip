@@ -1,10 +1,11 @@
 package com.althaaf.jettip.ui.component
 
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.DateRange
+import androidx.compose.material.icons.filled.AttachMoney
 import androidx.compose.material3.Icon
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
@@ -32,12 +33,12 @@ fun InputTextField(
         onValueChange = {
             moneyValue.value = it
         },
-        modifier = modifier.padding(12.dp),
+        modifier = modifier.padding(12.dp).fillMaxWidth(),
         label = {
             Text(labelId)
         },
         leadingIcon = {
-            Icon(imageVector = Icons.Filled.DateRange, contentDescription = "show icon dollar")
+            Icon(imageVector = Icons.Default.AttachMoney, contentDescription = "show icon dollar")
         },
         singleLine = isSingleLine,
         enabled = isEnabled,
